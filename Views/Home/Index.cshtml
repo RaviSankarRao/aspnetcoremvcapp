@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome back</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="text-center">
+    <p>Back to home Privacy - <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></p>
+</div>
+
+<div class="text-center">
+    <p>@ViewData["Name"] was born on @ViewData["DOB"]</p>
+</div>
+
+<div class="text-center">
+    @foreach (var item in ViewBag.Names)
+    {
+        <p>@item</p>
+    }
+</div>
+
+<div class="text-center">
+    @foreach (var item in TempData["Names"] as List<string>)
+    {
+        <p>@item</p>
+    }
+</div>
