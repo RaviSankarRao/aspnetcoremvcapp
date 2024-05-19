@@ -16,6 +16,7 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+// Seed data initialization
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;

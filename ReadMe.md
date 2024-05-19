@@ -7,7 +7,12 @@
 ## Repository Pattern
 
 - Using repository patterns to segerate data connection logic out of Controllers
-- [Repository folder](Repository)
+- Check [Repository folder](Repository) for more details
+
+## App start
+
+- Seed data initialization using Service Provider
+	- Look for `SeedData.Initialize` in [Program.cs](Program.cs)
 
 ## Dependency Injection
 
@@ -15,6 +20,12 @@
 
 
 ## Middleware
+
+
+
+## Controllers
+
+- Passing data to views using ViewData, ViewBag and TempData - [HomeController](Controllers/HomeController.cs)
 
 ---
 
