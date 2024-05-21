@@ -25,7 +25,8 @@
 
 ## Controllers
 
-- Passing data to views using ViewData, ViewBag and TempData - [HomeController](Controllers/HomeController.cs)
+- Passing data to views using ViewData, ViewBag and TempData 
+	- Look for `Passing data to views` region in [HomeController](Controllers/HomeController.cs)
 
 ---
 
