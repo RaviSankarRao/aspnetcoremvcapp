@@ -1,6 +1,7 @@
 ﻿
 namespace aspnetcoremvcapp.Middleware
 {
+    // Middleware activated by MiddlewareFactory
     public class RequestLoggerMiddleware : IMiddleware
     {
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
