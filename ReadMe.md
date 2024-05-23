@@ -21,7 +21,9 @@
 
 ## Middleware
 
-
+- Custom middleware - [RequestLoggerMiddleware](Middleware/RequestLoggerMiddleware.cs)
+	- Gets the request path and logs to a file
+- Extension methods to expose middlerware through IApplication builder - [MiddlewareExtensions](Middleware/MiddlewareExtensions.cs) 
 
 ## Controllers
 
