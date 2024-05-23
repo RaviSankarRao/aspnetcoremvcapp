@@ -3,12 +3,12 @@ using aspnetcoremvcapp.Repository;
 using Microsoft.DotNet.Scaffolding.Shared.ProjectModel;
 using Microsoft.EntityFrameworkCore;
 
-namespace aspnetcoremvcapp
+namespace aspnetcoremvcapp.DIConfigurations
 {
     public static class AppDependencyConfigurations
     {
         // Extension method to register Database context
-        public static IServiceCollection ConfigureDatabaseContext(this IServiceCollection services, string connectionString)
+        public static IServiceCollection AddDatabaseContext(this IServiceCollection services, string connectionString)
         {
             if (connectionString == null)
                 throw new InvalidOperationException("Connection string 'MvcMovieContext' not found.");
@@ -18,7 +18,7 @@ namespace aspnetcoremvcapp
         }
 
         // Extension method to register all dependent services
-        public static IServiceCollection ConfigureAppDepenencies(this IServiceCollection services)
+        public static IServiceCollection AddAppDepenencies(this IServiceCollection services)
         {
             services.AddScoped<IMoviesRepository, MoviesRepository>();
 

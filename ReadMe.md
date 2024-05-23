@@ -16,7 +16,7 @@
 
 ## Dependency Injection
 
-- Extension methods for configuring DI services in [AppDependencyConfigurations](AppDependencyConfigurations.cs)
+- Extension methods for configuring DI services in [DIConfigurations/AppDependencyConfigurations](AppDependencyConfigurations.cs)
 
 
 ## Middleware

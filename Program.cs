@@ -1,22 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using aspnetcoremvcapp.Models;
-using aspnetcoremvcapp;
 using aspnetcoremvcapp.Middleware;
+using aspnetcoremvcapp.DIConfigurations;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Dependency Injection - Entity Framework
-builder.Services.ConfigureDatabaseContext(builder.Configuration.GetConnectionString("MvcMovieContext"));
+builder.Services.AddDatabaseContext(builder.Configuration.GetConnectionString("MvcMovieContext"));
 
 // Configure dependencies
-builder.Services.ConfigureAppDepenencies();
+builder.Services.AddAppDepenencies();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 // Add middlewares
-builder.Services.ConfigureMiddleware();
+builder.Services.AddAppMiddleware();
 
 var app = builder.Build();
 
@@ -46,6 +46,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+// Use custom request logger middleware
 app.UseRequestLoggerMiddleware();
 
 app.Run();

@@ -4,9 +4,10 @@ namespace aspnetcoremvcapp.Middleware
 {
     public static class MiddlewareExtensions
     {
-        public static IServiceCollection ConfigureMiddleware(this IServiceCollection services)
+        public static IServiceCollection AddAppMiddleware(this IServiceCollection services)
         {
             services.AddTransient<RequestLoggerMiddleware>();
+            // Add more custom middlewares
 
             return services;
         }
