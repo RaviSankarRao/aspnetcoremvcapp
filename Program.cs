@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using aspnetcoremvcapp.Models;
 using aspnetcoremvcapp;
+using aspnetcoremvcapp.Middleware;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,9 @@ builder.Services.ConfigureAppDepenencies();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add middlewares
+builder.Services.ConfigureMiddleware();
 
 var app = builder.Build();
 
@@ -41,5 +45,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.UseRequestLoggerMiddleware();
 
 app.Run();
