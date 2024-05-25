@@ -1,0 +1,7 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+GET https://localhost:7208/api/movies
+
+###
+
+GET https://localhost:7208/api/movies/3

@@ -35,6 +35,13 @@
 
 - API controllers are slightly different - Take a look at [MoviesApiController](Controllers/MoviesApiController.cs)
 
+## Testing
+
+### .http files
+
+- VS .http files helps in API testing
+- Check [movies_api.http](Tests/movies_api.http) file for testing Movies API
+
 ---
 
 [ASP_NET_Documentation]: https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-8.0
