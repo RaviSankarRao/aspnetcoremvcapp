@@ -16,15 +16,23 @@ namespace aspnetcoremvcapp.Controllers
         }
 
         [Route("")]
-        public async Task<List<Movie>> GetMovies()
+        public async Task<IActionResult> GetMovies()
         {
-            return await _moviesRepository.GetMovies();
+            var movies = await _moviesRepository.GetMovies();
+            return Ok(movies);
         }
 
         [Route("{id}")]
-        public async Task<Movie> GetMovieById([FromRoute]int? id)
+        public async Task<IActionResult> GetMovieById([FromRoute]int? id)
         {
-            return await _moviesRepository.GetMovieById(id);
+            var movie = await _moviesRepository.GetMovieById(id);
+
+            if (movie == null)
+            {
+                return NotFound();
+            }
+            else
+                return Ok(movie);
         }
     }
 }
