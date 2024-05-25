@@ -4,12 +4,6 @@
 
 - ASP.NET official documentation - [Link][ASP_NET_Documentation]
 
-## Repository Pattern
-
-- Using repository patterns to move data connection logic out of Controllers
-	- Keeps Controller lean
-- Check [Repository folder](Repository) for more details
-
 ## App start
 
 - Seed data initialization using Service Provider
@@ -18,7 +12,6 @@
 ## Dependency Injection
 
 - Extension methods for configuring DI services in [DIConfigurations/AppDependencyConfigurations](DIConfigurations/AppDependencyConfigurations.cs)
-
 
 ## Middleware
 
@@ -34,6 +27,12 @@
 ## API Controllers
 
 - API controllers are slightly different - Take a look at [MoviesApiController](Controllers/MoviesApiController.cs)
+
+## Repository Pattern
+
+- Using repository patterns to move data connection logic out of Controllers
+	- Keeps Controller lean
+- Check [Repository folder](Repository) for more details
 
 ## Testing
 
