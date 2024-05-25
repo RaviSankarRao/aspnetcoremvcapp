@@ -25,10 +25,14 @@
 	- Gets the request path and logs to a file
 - Extension methods to expose middlerware through IApplication builder - [MiddlewareExtensions](Middleware/MiddlewareExtensions.cs) 
 
-## Controllers
+## MVC Controllers
 
 - Passing data to views using ViewData, ViewBag and TempData 
 	- Look for `Passing data to views` region in [HomeController](Controllers/HomeController.cs)
+
+## API Controllers
+
+- API controllers are slightly different - Take a look at [MoviesApiController](Controllers/MoviesApiController.cs)
 
 ---
 
