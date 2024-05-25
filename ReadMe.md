@@ -6,7 +6,8 @@
 
 ## Repository Pattern
 
-- Using repository patterns to segerate data connection logic out of Controllers
+- Using repository patterns to move data connection logic out of Controllers
+	- Keeps Controller lean
 - Check [Repository folder](Repository) for more details
 
 ## App start
